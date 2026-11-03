@@ -1,0 +1,39 @@
+name: pokedex
+description: Pokédex Flutter Offline-First (PokeAPI GraphQL) - Proyecto Final, Desarrollo de Aplicaciones Móviles, PUCMM.
+publish_to: "none"
+version: 0.4.0+1
+
+environment:
+  sdk: ^3.6.0
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Gestión de estado + inyección de dependencias (ADR-0002)
+  flutter_riverpod: ^2.6.1
+
+  # Persistencia local estructurada: fuente de verdad observable (ADR-0001)
+  drift: ^2.22.0
+  drift_flutter: ^0.2.4
+
+  # Cliente HTTP usado para enviar las consultas GraphQL (ADR-0004)
+  http: ^1.2.2
+
+  # Detección de cambios de red (la disponibilidad real se verifica contra la API)
+  connectivity_plus: ^6.1.0
+
+  # Imágenes con caché en disco (visualización offline)
+  cached_network_image: ^3.4.1
+  flutter_cache_manager: ^3.4.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.13
+  drift_dev: ^2.22.0
+
+flutter:
+  uses-material-design: true
