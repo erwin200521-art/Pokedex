@@ -82,7 +82,7 @@ class PokemonLocalDataSource {
           for (final dto in page) {
             for (final type in dto.types) {
               types[type.typeId] =
-                  ElementTypesCompanion.insert(id: type.typeId, name: type.name);
+                  ElementTypesCompanion.insert(id: Value(type.typeId), name: type.name);
               links.add(
                 PokemonTypeLinksCompanion.insert(
                   pokemonId: dto.id,
