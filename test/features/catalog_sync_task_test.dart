@@ -107,7 +107,7 @@ void main() {
 
   test('PS-03: un catálogo completo vuelve a sincronizarse al quedar desactualizado',
       () async {
-    var now = DateTime(2026, 11, 15, 8);
+    var now = DateTime.now();
     final task = buildTask(FakeRemote(10), clock: () => now);
 
     expect(await task.needsSync(), isTrue);
